@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>ch.vorburger.learn.eclipse</groupId>
+	<artifactId>pom</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../ch.vorburger.learn.osgi1</module>
+		<module>../ch.vorburger.learn.osgi1.test</module>
+		<module>../ch.vorburger.learn.osgi2</module>
+		<module>../ch.vorburger.learn.eclipse.plugin1.ui</module>
+		<module>../ch.vorburger.learn.eclipse.feature</module>
+		<module>../ch.vorburger.learn.eclipse.site</module>
+	</modules>
+
+	<properties>
+		<tycho-version>0.14.0</tycho-version>
+		<tycho-groupid>org.eclipse.tycho</tycho-groupid>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<prerequisites>
+		<maven>3.0</maven>
+	</prerequisites>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>${tycho-groupid}</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>${tycho-groupid}</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+					<ignoreTychoRepositories>true</ignoreTychoRepositories>
+					<pomDependencies>consider</pomDependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>${tycho-groupid}</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<pluginRepositories>
+<!--	
+		<pluginRepository>
+			<id>sonatype snapshots</id>
+			<url>https://repository.sonatype.org/content/repositories/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+  -->		
+	</pluginRepositories>
+
+	<repositories>
+		<repository>
+			<id>Eclipse Helios</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/helios/</url>
+		</repository>
+		<repository>
+			<id>Eclipse Helios Updates</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/eclipse/updates/3.6</url>
+		</repository>
+		<repository>
+			<id>Eclipse Orbit</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/</url>
+		</repository>
+	</repositories>
+
+</project>

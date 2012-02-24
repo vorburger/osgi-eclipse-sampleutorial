@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ch.vorburger.learn.eclipse.feature_1.0.0.qualifier.jar" id="ch.vorburger.learn.eclipse.feature" version="1.0.0.qualifier">
+      <category name="the_good_stuff"/>
+   </feature>
+   <category-def name="the_good_stuff" label="The Good STUFF">
+      <description>
+         This is the Good Stuff... ;-)
+      </description>
+   </category-def>
+</site>

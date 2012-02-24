@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGi1-bundle
+Bundle-SymbolicName: ch.vorburger.learn.osgi1
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: ch.vorburger.learn.osgi1.Activator
+Bundle-Vendor: Vorburger.ch
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: ch.vorburger.learn.osgi2,
+ org.osgi.framework;version="1.3.0"
