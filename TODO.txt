@@ -1,15 +1,4 @@
 
-* Tests with Tycho? RTFM... ;-)
-	http://aniszczyk.org/2011/03/04/maven-tycho-hudson-jenkins-and-eclipse/
-	http://eclipsecon.org/sessions/building-eclipse-plugins-and-rcp-applications-tycho
-	http://www.slideshare.net/jsievers/building-eclipse-plugins-and-rcp-applications-with-tycho
-	http://mattiasholmqvist.se/2010/06/building-with-tycho-part-3-testing-code-coverage-and-easier-development-using-target-definitions/
-	http://www.java-forum.org/deployment/116917-tycho-unit-tests.html
-	http://timezra.blogspot.com/2010/05/tycho-tests-without-osgi.html
-	http://java.sys-con.com/node/1839682
-	http://wiki.eclipse.org/Tycho/Packaging_Types
-	https://docs.sonatype.org/display/TYCHO/How+to+run+SWTBot+tests+with+Tycho
-
 * b2?
 
 * OSGi Services example

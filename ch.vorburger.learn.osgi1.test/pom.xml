@@ -14,6 +14,6 @@
 	<groupId>ch.vorburger.learn</groupId>
 	<artifactId>ch.vorburger.learn.osgi1.test</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>eclipse-test-plugin</packaging>
 
 </project>

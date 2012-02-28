@@ -3,6 +3,7 @@ package ch.vorburger.learn.osgi1.test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import ch.vorburger.learn.osgi2.PublicThingInOSGi2;
@@ -18,6 +19,7 @@ public class PublicThingsTest {
 	}
 
 	@Test
+	@Ignore
 	public void testFailing() {
 		fail("Boo!");
 	}
