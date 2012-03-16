@@ -7,37 +7,40 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<modules>
-		<module>../ch.vorburger.learn.osgi1</module>
-		<module>../ch.vorburger.learn.osgi1.test</module>
-		<module>../ch.vorburger.learn.osgi2</module>
-		<module>../ch.vorburger.learn.eclipse.plugin1.ui</module>
-		<module>../ch.vorburger.learn.eclipse.feature</module>
-		<module>../ch.vorburger.learn.eclipse.site</module>
-	</modules>
-
 	<properties>
-		<tycho-version>0.14.0</tycho-version>
+		<tycho.version>0.14.1</tycho.version>
 		<tycho-groupid>org.eclipse.tycho</tycho-groupid>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<prerequisites>
-		<maven>3.0</maven>
+		<maven>3.0.4</maven>
 	</prerequisites>
 
 	<build>
+		<extensions>
+			<extension>
+				<groupId>org.sourcepit.b2</groupId>
+				<artifactId>b2-maven-plugin</artifactId>
+				<version>0.1.0-alpha-2</version>
+			</extension>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>1.0-beta-7</version>
+			</extension>
+		</extensions>
 		<plugins>
 			<plugin>
 				<groupId>${tycho-groupid}</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
 				<groupId>${tycho-groupid}</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<configuration>
 					<resolver>p2</resolver>
 					<ignoreTychoRepositories>true</ignoreTychoRepositories>
@@ -51,7 +54,7 @@
 				<plugin>
 					<groupId>${tycho-groupid}</groupId>
 					<artifactId>tycho-compiler-plugin</artifactId>
-					<version>${tycho-version}</version>
+					<version>${tycho.version}</version>
 					<configuration>
 						<encoding>UTF-8</encoding>
 						<source>1.6</source>
@@ -63,6 +66,10 @@
 	</build>
 
 	<pluginRepositories>
+		<pluginRepository>
+			<id>srcpit-public</id>
+			<url>http://nexus.sourcepit.org/content/groups/public/</url>
+		</pluginRepository>	
 <!--	
 		<pluginRepository>
 			<id>sonatype snapshots</id>
